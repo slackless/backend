@@ -1,10 +1,12 @@
 {
     "private": true,
     "scripts": {
-        "larastan": "./vendor/bin/phpstan analyse"
+        "larastan": "./vendor/bin/phpstan analyse",
+        "phpcs": "php ./vendor/bin/phpcs"
     },
     "pre-commit": [
-        "larastan"
+        "larastan",
+        "phpcs"
     ],
     "devDependencies": {
         "pre-commit": "^1.2.2"
